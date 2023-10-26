@@ -1,0 +1,88 @@
+//compileCompressed: style.css
+
+@import "mixins.scss";
+
+.widget_thrivedx_widget {
+    width: 100%;
+    max-width: 100%;
+    .widget-title {
+        font-size: 24px;
+        line-height: 1.6;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    .thrivedx-posts-widget {
+        @include flexbox;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .thrivedx-article{
+            width: 32%;
+            margin: 0 0 20px 0;
+        }
+        &.total-y {
+            .thrivedx-article{
+                width: 24%;
+            }
+        }
+    }
+    .post-thumbnail {
+        text-decoration: none;
+        @include inline-flex;
+        position: relative;
+        overflow: hidden;
+        img {
+            height: auto;
+            @include trans(350ms);
+        }
+        &:hover {
+            img {
+                @include scale(1.1);
+            }
+        }
+    }
+    .post-meta {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+    .post-title {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .widget_thrivedx_widget {
+        .thrivedx-posts-widget {
+            .thrivedx-article{
+                width: 32%;
+            }
+            &.total-y {
+                .thrivedx-article{
+                    width: 32%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .widget_thrivedx_widget {
+        .thrivedx-posts-widget {
+            .thrivedx-article{
+                width: 100%;
+            }
+            &.total-y {
+                .thrivedx-article{
+                    width: 100%;
+                }
+            }
+        }
+        .post-thumbnail {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+@mixin trans( $ms ){
+    -webkit-transition: all $ms ease;
+    -moz-transition: all $ms ease;
+    -ms-transition: all $ms ease;
+    -o-transition: all $ms ease;
+    transition: all $ms ease;
+}
+@mixin scale($size){
+    -moz-transform: scale($size);
+    -webkit-transform: scale($size);
+    -o-transform: scale($size);
+    -ms-transform: scale($size);
+    transform: scale($size);
+}
